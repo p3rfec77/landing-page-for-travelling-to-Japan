@@ -12,3 +12,64 @@ html {
 *, *::after, *::before {
     box-sizing: inherit;
 }
+
+body {
+    font-family: 'Lato', sans-serif;
+    font-weight: normal;
+    font-size: 16px;
+    color: #102746;
+}
+
+.wrapper {
+    max-width: 1060px;
+    margin: 0 auto;
+}
+
+.header {
+    background-color: #000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.header__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding-top: 56px;
+}
+
+@media screen and (max-width:600px) {
+    .header__wrapper {
+        flex-direction: column;
+        align-items: center;
+        padding-top: 30px;
+    }
+}
+
+.header__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 82px;
+    list-style: none;
+}
+
+@media screen and (max-width:600px) {
+    .header__list {
+        gap: 15px
+    }
+}
+
+.header__link {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.header__link:hover, .header__link:focus {
+    text-decoration: underline;
+}
