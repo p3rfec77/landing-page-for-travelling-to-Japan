@@ -20,12 +20,17 @@ body {
     color: #102746;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 .wrapper {
     max-width: 1060px;
     margin: 0 auto;
 }
 
-/* HEADER */
+/* HEADER STYLES START */
 
 .header {
     position: fixed;
@@ -81,16 +86,18 @@ body {
     text-decoration: underline;
 }
 
-/* INTRO */
+/* HEADER STYLES END */
+
+/* INTRO STYLES START */
 
 .intro {
-    min-height: 100vh;
+    min-height: 115vh;
     background: url(img/intro-bg.jpg) no-repeat center;
     background-size: cover;
 }
 
 .intro__title {
-    font-weight: 700;
+    font-weight: 500;
     font-size: 50px;
     line-height: 60px;
     color: #FFFFFF;
@@ -154,3 +161,88 @@ body {
 .search-form__submit:hover, .search-form__submit:focus {
     background-color: #1564cc;
 }
+
+/* INTRO SYLES END */
+
+/* BENEFITS STYLES START */
+
+.benefits {
+    margin-bottom: 131px;
+}
+
+.benefits__wrap {
+    max-width: 1262px;
+    background-color: #FFFFFF;
+    margin: 0 auto;
+    box-shadow: 0px 2px 20px rgba(21, 24, 36, 0.15993);
+    position: relative;
+}
+
+.benefits__title {
+    width: 100%;
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 42px;
+    padding: 93px 100px 88px 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateY(-100%);
+    background-color: #FFFFFF;
+}
+
+.benefits__cards {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    column-gap: 55px;
+    padding: 0px 100px;
+}
+
+.benefits__card {
+    grid-column: span 1;
+    margin-bottom: 112px;
+}
+
+.benefits__card-pic {
+    max-width: 66px;
+    margin-bottom: 40px;
+}
+
+.benefits__card-pic img {
+    display: block;
+}
+
+.benefits__card-title {
+    font-weight: 700    ;
+    font-size: 18px;
+    line-height: 24px;
+    color: #000;
+    margin-bottom: 25px;
+}
+
+.benefits__card-desc {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000;
+    margin-bottom: 40px;
+}
+
+.benefits__card-more {
+    display: inline-block;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #006DFE;
+    cursor: pointer;
+    text-decoration: none;
+    padding-right: 60px;
+    background: url(img/svg/arrow-right-ico.svg) no-repeat 95% center;
+    transition: 0.2s;
+}
+
+.benefits__card-more:hover, .benefits__card-more:focus {
+    background: url(img/svg/arrow-right-ico.svg) no-repeat right center; 
+}
+
+/* BENEFITS STYLES END */
