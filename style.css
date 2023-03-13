@@ -25,8 +25,9 @@ body {
     margin: 0 auto;
 }
 
+/* HEADER */
+
 .header {
-    background-color: #000;
     position: fixed;
     top: 0;
     left: 0;
@@ -38,10 +39,10 @@ body {
     flex-wrap: wrap;
     align-items: flex-end;
     justify-content: space-between;
-    padding-top: 56px;
+    padding-top: 55px;
 }
 
-@media screen and (max-width:600px) {
+@media screen and (max-width:650px) {
     .header__wrapper {
         flex-direction: column;
         align-items: center;
@@ -49,14 +50,20 @@ body {
     }
 }
 
+@media screen and (max-width:1140px) and (min-width: 651px) {
+    .header__wrapper {
+        padding: 55px 30px;
+    }
+}
+
 .header__list {
     display: flex;
     flex-wrap: wrap;
-    gap: 82px;
+    gap: 80px;
     list-style: none;
 }
 
-@media screen and (max-width:600px) {
+@media screen and (max-width:650px) {
     .header__list {
         gap: 15px
     }
@@ -72,4 +79,78 @@ body {
 
 .header__link:hover, .header__link:focus {
     text-decoration: underline;
+}
+
+/* INTRO */
+
+.intro {
+    min-height: 100vh;
+    background: url(img/intro-bg.jpg) no-repeat center;
+    background-size: cover;
+}
+
+.intro__title {
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 60px;
+    color: #FFFFFF;
+    padding-top: 263px;
+    max-width: 619px;
+    margin-bottom: 22px;
+}
+
+.intro__subtitle {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #FFFFFF;
+    max-width: 546px;
+    margin-bottom: 60px;
+}
+
+.search-form__wrap {
+    border: transparent;
+}
+
+.search-form__info {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.search-form__field {
+    width: 297px;
+    background: transparent url(img/svg/circle-icon.svg) no-repeat left 6px;
+    background-size: 20px;
+    border: 0px;
+    border-bottom: 2px solid #BFC0C5;
+    outline: none;
+    margin-right: 60px;
+    padding: 0px 0px 22px 43px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    color: #FFFFFF;
+}
+
+.search-form__field::placeholder{
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    color: #FFFFFF;
+}
+
+.search-form__submit {
+    background-color: #1B7DFF;
+    border: 0;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    color: #FFFFFF;
+    padding: 15px 40px;
+    text-transform: uppercase;
+}
+
+.search-form__submit:hover, .search-form__submit:focus {
+    background-color: #1564cc;
 }
