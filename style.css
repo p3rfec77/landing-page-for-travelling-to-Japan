@@ -30,6 +30,11 @@ img {
     margin: 0 auto;
 }
 
+.wrapper-full {
+    max-width: 1265px;
+    margin: 0 auto;
+}
+
 /* HEADER STYLES START */
 
 .header {
@@ -246,3 +251,124 @@ img {
 }
 
 /* BENEFITS STYLES END */
+
+
+/* INSPIRATION STYLES START */
+
+.inspiration__header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 35px;
+}
+
+.inspiration__title {
+    font-weight: 500;
+    font-size: 35px;
+    line-height: 42px;
+    color: #102746;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.inspiration__title::after {
+    display: block;
+    content: '';
+    width: 253px;
+    height: 3px;
+    background-color: #006DFE;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.inspiration__view-all {
+    display: inline-block;
+    align-self: center;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #006DFE;
+    cursor: pointer;
+    text-decoration: none;
+    padding-right: 60px;
+    background: url(img/svg/arrow-right-ico.svg) no-repeat 95% center;
+    transition: 0.2s;
+}
+
+.inspiration__view-all:hover, .inspiration__view-all:focus {
+    background: url(img/svg/arrow-right-ico.svg) no-repeat right center; 
+}
+
+.inspiration__cards {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 10px;
+}
+
+.inspiration__card {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.inspiration__card::after {
+    display: block;
+    content: '';
+    width: 100%;
+    height: 99%;
+    background: rgba(21, 24, 36, 0.4);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.inspiration__card:hover .inspiration__card-pic {
+    transform: scale(1.1);
+}
+
+.inspiration__card-pic {
+    width: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+}
+
+.inspiration__card-pic_size_lg {
+    height: 354px;
+    object-fit: cover;
+}
+
+.inspiration__card-pic_size_sm {
+    height: 283px;
+    object-fit: cover;
+}
+
+.inspiration__card-title {
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 60px;
+    color: #FFFFFF;
+    position: absolute;
+    bottom: 27px;
+    left: 29px;
+    z-index: 3;
+}
+
+.inspiration__card_size_lg {
+    grid-column: span 3;
+}
+
+.inspiration__card_size_sm {
+    grid-column: span 2;
+}
+
+.inspiration__card-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 4;
+}
+
+/* INSPIRATION STYLES END */
